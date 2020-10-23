@@ -1,0 +1,35 @@
+*{
+	margin:0px;
+	padding:0px;
+}
+
+body {
+	margin:0px;
+	padding:0px;
+	width:100%;
+	font-family:Calibri;
+	font-size:13px;
+	
+    }
+.div_conteneur_parent,.div_exo_fonction
+{
+	margin-left:10%;
+	width:80%;
+    height:auto;
+    background-color:#378b8b;
+	text-align:center;
+}
+.div_conteneur_page,.div_exo_prenom
+{
+	width:100%;
+    height:auto; 
+    background-color:#8b3780;
+	text-align:center;
+}
+.div_exo_poussin
+{
+	width:100%;
+    height:auto;
+    background-color:#d8e618;
+	text-align:center;
+}
