@@ -8,7 +8,6 @@
     ?>
     <title><?php echo $titre; ?></title>
     <?php
-            $nom = ""; //affecter a la variable nom votre prenom
             $nom = "Philippe";
             $team = ["benoit","mathilde","stephanie"];
             $metier = [
@@ -16,15 +15,28 @@
                 "mathilde" => "UI/UX",
                 "stephanie" => "product owner"
             ];
-            $ma_verite = true;
+            $ma_verite = false;
             $calcul = 5 + 25;
-                
-            
+    // le role de la fonction est de verifier la valeur de $ma_verite si la valeur 
+    //est fausse  alors tu change le contenue de la $nom (pour un autre nom)
+    //appeller la fonction dans le head bien entendue à la fin du script php
+        function verite($a,&$nom)  {
+            if ($a === true){}
+              else {
+               $nom ="arthur";
+              } ;
+        }  
+        verite($ma_verite,$nom);
+       
     ?>
 </head>
-<body>
+<body> 
+    <?php
+    var_dump($ma_verite);
+        echo $nom; 
+        ?>  
    <nav>
-<!--ici liens vers la page remember -->
+<!--ici liens vers la page remember --> 
             <a href="remember.php?nom=<?php echo $nom?>">lienremember</a>
    </nav>   
 <!-- afficher la phrase suivante : bonjour a tous, je m'appelle...${nom} -->
@@ -73,6 +85,7 @@ sinon afficher <h1>faux</h1> -->
 si true faire afficher vrai
 sinon afficher faux
 </p>
+<!-- utilisation condition ternaire -->
 <?php 
         echo (($ma_verite?: !$ma_verite)?'<h1>vrai</h1>':'<h1>faux</h1>'); 
 ?>
@@ -100,5 +113,39 @@ else {
         echo 'too high';
 } 
 ?>
+<!--differente type de boucle et conditions ## troisieme partie
+    listez les differentes type de boucle et conditions, 
+    expliquez en une ligne ?
+    ainsi que break et continue-->
+<p>boucle for et while fonctionnent différemment mais peuvent être utilisées 
+      pour obtenir un résultat similaire.
+      préconiser for lorsque le nombre d'occurences ou nombre de boucles est connu.
+      sinon pas de préférence entre les 2 types.
+</p>
+<p>l'utilisation de break s'opère dans le cadre de l'utilisation de condition
+    switch et pour cesser de continuer de traiter les instructions suivantes 
+    dans le cas du succès de la condition testée. Ainsi on utilise default pour 
+    traiter les autres cas non précisés si aucun case n'est exécuté. Le switch est utlisé pour éviter les 
+    trop nombreuses imbrications if elseif.
+</p>
+<!--fonction ## quatrieme partie
+les instruction ce sont pas ecrite dans le index.php comme les autres mais cela reste un exercice donc le 9eme du fichier
+
+    creation d'une fonction dans le head du fichier index.php
+    trois types de recherches, basées sur des fonctions PHP :
+
+    array_key_exists : pour vérifier si une clé existe dans l'array ;
+
+    in_array : pour vérifier si une valeur existe dans l'array ;
+
+    array_search : pour récupérer la clé d'une valeur dans l'array. 
+
+    le role de la fonction est de verifier la valeur de $ma_verite si la valeur 
+    est fausse  alors tu change le contenue de la $nom (pour un autre nom)
+
+    appeller la fonction dans le head bien entendue à la fin du script php
+
+    watch et analyse le comportement dans votre code
+-->
 </body>
 </html>
